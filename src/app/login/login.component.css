@@ -9,6 +9,14 @@
     z-index: 0;
 }
 
+.login-heading {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    padding-top: 40px;
+    font-size: xx-large;
+}
+
 .login-tab-container {
     background-color: aliceblue;
     margin: 60px 150px 100px 150px;
