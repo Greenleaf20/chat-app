@@ -1,0 +1,19 @@
+.login-container {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.login-tab-container {
+    background-color: aliceblue;
+    margin: 100px 150px 100px 150px;
+    width: 50vw;
+    position: absolute;
+    top: 1%; 
+    left: 15%;
+}
