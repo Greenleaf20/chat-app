@@ -1,0 +1,52 @@
+<div class="signup-form-container">
+    <mat-card class="signup-card">
+        <mat-card-title class="signup-input-title">Sign Up</mat-card-title>
+        <mat-card-content class="signup-content">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <p>
+                    <mat-form-field class="signup-input">
+                        <input type="text" matInput placeholder="First Name" formControlName="firstname">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="signup-input">
+                        <input type="lastname" matInput placeholder="Last Name" formControlName="lastname">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="signup-input">
+                        <input type="text" matInput placeholder="Username" formControlName="username">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="signup-input">
+                        <input type="password" matInput placeholder="Password" formControlName="password">
+                    </mat-form-field>
+                </p>
+
+                <div class="button-container">
+                    <button mat-raised-button type="submit" class="signup-button">Sign Up</button>
+                </div>  
+
+                <div *ngIf="usernameError" class="input-form-error">
+                    {{ usernameError }}
+                </div>
+
+                <div *ngIf="passwordError" class="input-form-error">
+                    {{ passwordError }}
+                </div>
+
+                <div *ngIf="firstnameError" class="input-form-error">
+                    {{ firstnameError }} 
+                </div>
+
+                <div *ngIf="lastnameError" class="input-form-error">
+                    {{ lastnameError }}
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,24 +1,24 @@
-.login-form-container {
+.signup-form-container {
     display: flex;
     justify-content: center;
 }
 
-.login-input-title {
+.signup-input-title {
     display: flex;
     justify-content: center;
 }
 
-.login-card {
-    padding: 50px;
+.signup-card {
+    padding: 20px 50px 20px 50px;
     min-width: 30vw;
-    margin: 50px 0px 50px 0px;
+    margin: 20px 0px 50px 0px;
 }
 
-.login-content {
-    margin-top: 40px;
+.signup-content {
+    margin-top: 10px;
 }
 
-.login-input {
+.signup-input {
     width: 100% !important;
 }
 
@@ -27,7 +27,7 @@
     justify-content: center;
 }
 
-.login-button {
+.signup-button {
     background-color: lightskyblue !important;
     color: black !important;
 }
