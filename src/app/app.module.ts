@@ -9,14 +9,15 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+  ],
   imports: [
     BrowserModule, 
     LoginModule,
     RouterModule.forRoot(
         routes
     ),
-    
   ],
   providers: [
     provideAnimations(),
