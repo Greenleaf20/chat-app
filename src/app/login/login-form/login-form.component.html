@@ -1,0 +1,32 @@
+<div class="login-container" [style.backgroundImage]="'url(/assets/bg.jpg)'">
+    <mat-card class="login-card">
+        <mat-card-title class="login-input-title">Login</mat-card-title>
+        <mat-card-content class="login-content">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <p>
+                    <mat-form-field class="login-input">
+                        <input type="text" matInput placeholder="Username" formControlName="username">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="login-input">
+                        <input type="password" matInput placeholder="Password" formControlName="password">
+                    </mat-form-field>
+                </p>
+
+                <div class="button-container">
+                    <button mat-raised-button type="submit" class="login-button">Login</button>
+                </div>  
+
+                <div *ngIf="usernameError" class="input-form-error">
+                    {{ usernameError }}
+                </div>
+
+                <div *ngIf="passwordError" class="input-form-error">
+                    {{ passwordError }}
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

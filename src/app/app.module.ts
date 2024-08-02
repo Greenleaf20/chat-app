@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { LoginModule } from './login/login.module';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,9 +15,13 @@ import { routes } from './app.routes';
     LoginModule,
     RouterModule.forRoot(
         routes
-    )
+    ),
+    
   ],
-  providers: [],
+  providers: [
+    provideAnimations(),
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
