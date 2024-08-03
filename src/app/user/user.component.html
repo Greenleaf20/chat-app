@@ -8,6 +8,8 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-icon *ngIf="!isSideNavOpen" aria-hidden="false" aria-label="right" fontIcon="menu" (click)="toggleSidenav()" class="menu-icon"/>
-    <router-outlet></router-outlet>
+    <div [ngClass]="{'outlet-div': !isSideNavOpen}">
+      <router-outlet></router-outlet>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

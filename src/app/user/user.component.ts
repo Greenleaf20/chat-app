@@ -8,7 +8,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class UserComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
-  isSideNavOpen: boolean = true;
+  isSideNavOpen: boolean = false;
 
   toggleSidenav() {
     this.sidenav.toggle();

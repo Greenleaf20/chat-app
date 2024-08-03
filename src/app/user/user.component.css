@@ -68,3 +68,7 @@
   mat-list-item.active ::ng-deep span.mdc-list-item__primary-text {
     color: black;
   }
+
+  .outlet-div {
+    margin-left: 50px;
+  }
