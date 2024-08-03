@@ -8,6 +8,8 @@ import { MatListModule } from '@angular/material/list';
 import { UserComponent } from './user.component';
 import { ChatsComponent } from './chats/chats.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 const userRoutes: Routes = [
   {
@@ -33,7 +35,9 @@ const userRoutes: Routes = [
     MatSidenavModule,
     MatButtonModule,
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule,
+    MatGridListModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
