@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     RouterModule.forRoot(
         routes
     ),
+    UserModule
   ],
   providers: [
     provideAnimations(),
