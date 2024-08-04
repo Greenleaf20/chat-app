@@ -1,0 +1,27 @@
+<div class="home-container">
+    <mat-card class="profile-card">
+        <mat-card-title class="profile-input-title">Profile Information</mat-card-title>
+        <mat-card-content class="profile-content">
+            <mat-grid-list cols="12" rowHeight="800px">
+                <mat-grid-tile colspan="4">
+                    <div class="left-col">
+                        <img src="/assets/profile-pic.png" class="profile-pic">
+                        <div class="about">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias ipsa voluptatibus nesciunt, a nulla illum consequatur! Sed placeat, quasi blanditiis sequi aperiam deserunt numquam totam ratione rerum dolorum cupiditate dignissimos?
+                        </div>
+                    </div>
+                </mat-grid-tile>
+                <mat-grid-tile colspan="8">
+                    <div class="right-col">
+                        <div class="user-details">
+                            <p class="detail-field"><span>First Name:</span> {{userDetails.firstname}}</p>
+                            <p class="detail-field"><span>Last Name:</span> {{userDetails.lastname}}</p>
+                            <p class="detail-field"><span>User Name:</span> {{userDetails.username}}</p>
+                            <!-- <p class="detail-field"><span>Country:</span> United States</p> -->
+                        </div>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-card-content>
+    </mat-card>
+</div>

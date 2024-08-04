@@ -1,0 +1,40 @@
+.login-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-input-title {
+    display: flex;
+    justify-content: center;
+}
+
+.login-card {
+    padding: 50px;
+    min-width: 30vw;
+    margin: 50px 0px 50px 0px;
+}
+
+.login-content {
+    margin-top: 40px;
+}
+
+.login-input {
+    width: 100% !important;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.login-button {
+    background-color: lightskyblue !important;
+    color: black !important;
+}
+
+.input-form-error {
+    display: flex;
+    justify-content: center;
+    color: red;
+    margin-top: 10px;
+}
