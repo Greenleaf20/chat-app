@@ -32,4 +32,8 @@ export class UsersListService {
         this.userDetailsService.setUserDetails(user);
         return user.id;
     }
+
+    public logout() {
+        this.userDetailsService.resetUserDetails();
+    }
 }
