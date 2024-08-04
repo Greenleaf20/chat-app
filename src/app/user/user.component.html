@@ -2,8 +2,9 @@
   <mat-sidenav #sidenav mode="side" [opened]="isSideNavOpen">
     <mat-icon *ngIf="isSideNavOpen" aria-hidden="false" aria-label="left" fontIcon="chevron_left" (click)="toggleSidenav()" class="collapse-sidenav-icon"/>
     <mat-nav-list>
-      <mat-list-item routerLink="/user/home" routerLinkActive="active"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home" (click)="toggleSidenav()" class="sidenav-list-icon home-icon"/>Home</mat-list-item>
-      <mat-list-item routerLink="/user/chats" routerLinkActive="active"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="chat_bubble" (click)="toggleSidenav()" class="sidenav-list-icon chat-icon"/>Chats</mat-list-item>
+      <mat-list-item routerLink="/user/home" routerLinkActive="active"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="home" class="sidenav-list-icon home-icon"/>Home</mat-list-item>
+      <mat-list-item routerLink="/user/chats"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="chat_bubble" class="sidenav-list-icon chat-icon"/>Chats</mat-list-item>
+      <mat-list-item routerLink="/"><mat-icon aria-hidden="false" aria-label="home icon" fontIcon="logout" class="sidenav-list-icon chat-icon"/>Logout</mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

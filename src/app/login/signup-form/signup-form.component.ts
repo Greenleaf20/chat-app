@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsersListService } from '../../common/services/users-list.service';
+import { UserDetails } from '../../common/models/user-details.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-form',
@@ -7,6 +10,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrl: './signup-form.component.css'
 })
 export class SignupFormComponent {
+
+  constructor(private usersListService: UsersListService,
+    private router: Router
+  ) {
+
+  }
+
   username: string = '';
   password: string = '';
   firstname: string = '';
@@ -36,8 +46,11 @@ export class SignupFormComponent {
   passwordError: string = "";
   firstnameError: string = "";
   lastnameError: string = "";
+  signupError: string = "";
+  signupSuccess: string = "";
 
   onSubmit() {
+    this.signupError = "";
     if (this.form.invalid) {
       this.setError();
       return;
@@ -51,7 +64,19 @@ export class SignupFormComponent {
     this.password = this.form.value['password'];
     this.firstname = this.form.value['firstname'];
     this.lastname = this.form.value['lastname'];
-    console.log("Form submitted with", this.username, this.password, this.firstname, this.lastname);
+    let id = this.usersListService.addUser(new UserDetails(this.username, this.firstname, this.lastname, this.password));
+    
+    if (id===-1) {
+      this.signupError = "User name is taken!!";
+      return;
+    }
+
+    console.log("Signup successful");
+    this.signupSuccess = "Sign up was successful!"
+    setTimeout(() => {
+      this.signupSuccess = "";
+      this.router.navigate(['/user']);
+    },3000);
   }
 
   setError() {

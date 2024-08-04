@@ -8,6 +8,8 @@ import { routes } from './app.routes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { UserModule } from './user/user.module';
+import { UserDetailsService } from './common/services/user-details.service';
+import { UsersListService } from './common/services/users-list.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { UserModule } from './user/user.module';
   ],
   providers: [
     provideAnimations(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    UserDetailsService,
+    UsersListService
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

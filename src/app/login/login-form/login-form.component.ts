@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UsersListService } from '../../common/services/users-list.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -7,7 +9,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrl: './login-form.component.css'
 })
 export class LoginFormComponent {
-  constructor() {
+  constructor(private usersListService: UsersListService,
+    private router: Router
+  ) {
 
   }
 
@@ -30,8 +34,10 @@ export class LoginFormComponent {
 
   usernameError: string = "";
   passwordError: string = "";
+  loginError: string = "";
 
   onSubmit() {
+    this.loginError = "";
     if (this.form.invalid) {
       this.setError();
       return;
@@ -41,7 +47,18 @@ export class LoginFormComponent {
     this.passwordError = "";
     this.username = this.form.value['username'];
     this.password = this.form.value['password'];
-    console.log("Form submitted with", this.username, this.password);
+    let id = this.usersListService.login(this.username, this.password);
+
+    if (id===-1) {
+      this.loginError = "Username is not valid!!";
+      return;
+    } else if (id===-2) {
+      this.loginError = "Incorrect password!!";
+      return;
+    }
+
+    console.log("Login successful");
+    this.router.navigate(['/user']);
   }
 
   setError() {

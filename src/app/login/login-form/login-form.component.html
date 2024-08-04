@@ -26,6 +26,10 @@
                 <div *ngIf="passwordError" class="input-form-error">
                     {{ passwordError }}
                 </div>
+
+                <div *ngIf="loginError" class="input-form-error">
+                    {{ loginError }}
+                </div>
             </form>
         </mat-card-content>
     </mat-card>

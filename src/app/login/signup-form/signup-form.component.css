@@ -32,9 +32,16 @@
     color: black !important;
 }
 
-.input-form-error {
+.signup-form-error {
     display: flex;
     justify-content: center;
     color: red;
+    margin-top: 10px;
+}
+
+.signup-form-success {
+    display: flex;
+    justify-content: center;
+    color: green;
     margin-top: 10px;
 }

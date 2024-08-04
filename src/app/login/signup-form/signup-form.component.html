@@ -31,20 +31,28 @@
                     <button mat-raised-button type="submit" class="signup-button">Sign Up</button>
                 </div>  
 
-                <div *ngIf="usernameError" class="input-form-error">
+                <div *ngIf="usernameError" class="signup-form-error">
                     {{ usernameError }}
                 </div>
 
-                <div *ngIf="passwordError" class="input-form-error">
+                <div *ngIf="passwordError" class="signup-form-error">
                     {{ passwordError }}
                 </div>
 
-                <div *ngIf="firstnameError" class="input-form-error">
+                <div *ngIf="firstnameError" class="signup-form-error">
                     {{ firstnameError }} 
                 </div>
 
-                <div *ngIf="lastnameError" class="input-form-error">
+                <div *ngIf="lastnameError" class="signup-form-error">
                     {{ lastnameError }}
+                </div>
+
+                <div *ngIf="signupError" class="signup-form-error">
+                    {{ signupError }}
+                </div>
+
+                <div *ngIf="signupSuccess" class="signup-form-success">
+                    {{ signupSuccess}}
                 </div>
             </form>
         </mat-card-content>
