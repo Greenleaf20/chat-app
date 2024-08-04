@@ -57,7 +57,6 @@ export class LoginFormComponent {
       return;
     }
 
-    console.log("Login successful");
     this.router.navigate(['/user']);
   }
 

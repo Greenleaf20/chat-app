@@ -71,7 +71,6 @@ export class SignupFormComponent {
       return;
     }
 
-    console.log("Signup successful");
     this.signupSuccess = "Sign up was successful!"
     setTimeout(() => {
       this.signupSuccess = "";
